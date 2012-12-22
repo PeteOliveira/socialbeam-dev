@@ -1,0 +1,53 @@
+<div class="row-fluid">
+  <div class="span12">
+  	<h3><%= @user.full_name %></h3>
+    <div class="row-fluid">
+      <div class="span8">
+      	<div class="tabbable"> <!-- Only required for left/right tabs -->
+				  <ul class="nav nav-pills">
+				    <li class="active"><a href="#tab_i" data-toggle="tab">Interests</a></li>
+				    <li><a href="#tab_h" data-toggle="tab">Hobbies</a></li>
+				    <li><a href="#tab_m" data-toggle="tab">Movies</a></li>
+				    <li><a href="#tab_ms" data-toggle="tab">Books</a></li>
+				    <li><a href="#tab_s" data-toggle="tab">Sports</a></li>
+				    <li><a href="#tab_p" data-toggle="tab">Places</a></li>
+				    <li><a href="#tab_c" data-toggle="tab">Cuisines</a></li>
+				  </ul>
+				  <div class="tab-content">
+				  	<div class="tab-pane active" id="tab_i">
+				      <p>I'm in Section Interests</p>
+				    </div>
+				    <div class="tab-pane" id="tab_h">
+				      <p>I'm in Section Hobbies</p>
+				    </div>
+				    <div class="tab-pane" id="tab_m">
+				      <p>I'm in Section Movies</p>
+				    </div>
+				    <div class="tab-pane" id="tab_ms">
+				      <p>I'm in Section Books</p>
+				    </div>
+				    <div class="tab-pane" id="tab_s">
+				      <p>I'm in Section Sports</p>
+				    </div>
+				    <div class="tab-pane" id="tab_p">
+				      <p>I'm in Section Places</p>
+				    </div>
+				    <div class="tab-pane" id="tab_c">
+				      <p>I'm in Section Cuisines</p>
+				    </div>
+				  </div>
+				</div>
+      </div>
+      <div class="span4">
+      	<div class="media">
+				  <a class="pull-left" href="#">
+				    <img class="media-object" src="/assets/default_avatar.png"/>
+				  </a>
+				  <div class="media-body">
+				    <h4 class="media-heading"><%= @profile.snippet || "You don't have a headline" %></h4>
+				  </div>
+				</div>
+      </div>
+    </div>
+  </div>
+</div>
