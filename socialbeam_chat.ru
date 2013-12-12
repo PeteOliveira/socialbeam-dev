@@ -1,4 +1,4 @@
-# Run with: rackup socialbeam_chat.ru -s thin -E production
+#Check scrip/server.rb how to rackup socialbeam_chat.ru
 require "bundler/setup"
 require "yaml"
 require "faye"
