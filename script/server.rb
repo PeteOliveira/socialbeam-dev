@@ -15,7 +15,7 @@ SBCHAT_PID=ENV["SOCIALBEAM_FAYE_THIN_PID"].freeze
 
 UNAME="Unicorn Server for Socialbeam => ".freeze
 SBCHAT_UNAME="Thin Server for Socialbeam Chat => ".freeze
-
+RUNTIME_ENV=ENV["SOCIALBEAM_ENVIRONMENT"]
 
 class ServerBoot
 	class << self
@@ -23,7 +23,7 @@ class ServerBoot
 		def start
 			if !pid?
 				puts " #{UNAME} Starting"
-				system "#{DAEMON} #{DAEMON_OPTS}"
+				system "#{DAEMON} #{DAEMON_OPTS} -E #{RUNTIME_ENV}"
 				puts " #{UNAME} Started"
 				start_sbchat
 			else
